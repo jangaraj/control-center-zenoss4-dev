@@ -8,8 +8,9 @@ RUN \
     ls -lah && \
     chmod +x core-autodeploy.sh && \
     ./core-autodeploy.sh && \
-    chmod +x run.sh && \
-    mv run.sh /
+    mv run.sh / && \
+    chmod +x /run.sh
 
+WORKDIR /
 CMD ["/run.sh"]
     
